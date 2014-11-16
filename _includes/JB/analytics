@@ -1,18 +1,10 @@
-{% if site.safe and site.JB.analytics.provider and page.JB.analytics != false %}
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-{% case site.JB.analytics.provider %}
-{% when "google" %}
-  {% include JB/analytics-providers/google %}
-{% when "googleUA" %}
-  {% include JB/analytics-providers/googleUA %}
-{% when "getclicky" %}
-  {% include JB/analytics-providers/getclicky %}
-{% when "mixpanel" %}
-  {% include JB/analytics-providers/mixpanel %}
-{% when "piwik" %}
-  {% include JB/analytics-providers/piwik %}
-{% when "custom" %}
-  {% include custom/analytics %}
-{% endcase %}
+  ga('create', 'UA-191795-9', 'auto');
+  ga('send', 'pageview');
 
-{% endif %}
+</script>
